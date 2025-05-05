@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -40,7 +41,7 @@ fun GridLayoutApp() {
             .background(Color.White)
 
     ) {
-        // Top Row for System Status (Battery, Wifi, Time)
+
         Row(
             modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp),
             verticalAlignment = Alignment.CenterVertically,
@@ -151,7 +152,8 @@ fun GridItemCard(title: String, imageId: Int, modifier: Modifier = Modifier) {
             Image(
                 painter = painterResource(id = imageId),
                 contentDescription = title,
-                modifier = Modifier.size(48.dp),
+                modifier = Modifier.size(48.dp)
+                    .width(100.dp).clip(shape = RoundedCornerShape(100.dp)),
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(

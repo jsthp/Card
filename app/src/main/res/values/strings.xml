@@ -3,4 +3,5 @@
     <string name="title_activity_profileactivity">profileactivity</string>
     <string name="title_activity_card">CardActivity</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
 </resources>
